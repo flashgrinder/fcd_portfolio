@@ -58,6 +58,16 @@
     }
 }
 
+.link--primary {
+    color: var(--color-black);
+    transition: color .300s ease-in-out;
+    text-decoration: none;
+}
+
+.link--primary:hover {
+    color: var(--color-yellow);
+}
+
 /* Title */
 
 .title {
