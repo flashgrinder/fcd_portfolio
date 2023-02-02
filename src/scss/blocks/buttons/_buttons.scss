@@ -1,0 +1,35 @@
+.button {
+    font-family: var(--font-roboto);
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 5px;
+    padding: 20px 85px;
+    z-index: 10;
+    outline: var(--color-black);
+    border: none;
+    border-width: 1px;
+    transition: color .250s ease-in-out, background .250s ease-in-out;
+    overflow: hidden;
+}
+
+.button--primary {
+    color: var(--color-dark);
+    background: #D9D9D9;
+}
+
+.button--primary:hover {
+    color: var(--color-black);
+    background: var(--color-yellow);
+}
+
+.button--primary:focus,
+.button--primary:target {
+    outline: 1px solid var(--color-black);
+    border-width: 1px;
+}

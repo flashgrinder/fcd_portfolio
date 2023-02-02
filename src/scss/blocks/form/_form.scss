@@ -1,0 +1,193 @@
+.form {
+    font-family: var(--font-roboto);
+    width: 100%;
+    background: var(--color-white);
+}
+
+.form.invalid .form__input.wpcf7-not-valid {
+    border: 1px solid #FF0000;
+}
+
+.form__field {
+    position: relative;
+}
+
+.form__field ~ .form__field {
+    margin-top: 54px;
+}
+
+.form__field--choice {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 22px;
+    color: var(--color-white-low-35);
+}
+
+.form__field-text {
+    margin-bottom: 25px;
+}
+
+.form__field--choice .wpcf7-list-item {
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.form__field--choice .wpcf7-list-item input {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-white-low-45);
+    transition: border .2s ease-in-out;
+    outline: none;
+}
+
+.form__field--choice .wpcf7-list-item input:checked,
+.form__field--choice .wpcf7-list-item input:focus,
+.form__field--choice .wpcf7-list-item input:target,
+.form__field--choice .wpcf7-list-item input:hover {
+    border: 6px solid var(--color-blue-low-75);
+}
+
+.form__field--choice .wpcf7-list-item-label {
+    margin-left: 20px;
+}
+
+.form__field--choice .wpcf7-list-item ~ .wpcf7-list-item {
+    margin-top: 25px;
+}
+
+.form__input {
+    position: relative;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 22px;
+    width: 100%;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-black);
+    border-radius: 4px;
+    background: #F4F4F2;
+}
+
+.form__input:focus,
+.form__input:target,
+.form__input:active {
+    outline: none;
+    border: 1px solid rgba(160, 160, 160, 0.5);
+}
+
+.form__input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.form__input--textarea {
+    max-height: 100px;
+    min-width: 100%;
+    max-width: 455px;
+}
+
+.form__actions {
+    position: relative;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.form__wrap-policy {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.form__policy {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.form__policy::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05LjE3MjM4IDUuNDQ5NTlDOS4zNTI2NiA1LjYyNTcgOS4zNTI2NiA1LjkxMTI0IDkuMTcyMzggNi4wODczNkw2LjcxMDI1IDguNDkyNTNDNi41Mjk5NyA4LjY2ODY0IDYuMjM3NjcgOC42Njg2NCA2LjA1NzM4IDguNDkyNTNMNC44MjYzMiA3LjI4OTk0QzQuNjQ2MDQgNy4xMTM4MyA0LjY0NjA0IDYuODI4MjkgNC44MjYzMiA2LjY1MjE3QzUuMDA2NjEgNi40NzYwNiA1LjI5ODkxIDYuNDc2MDYgNS40NzkxOSA2LjY1MjE3TDYuMzgzODIgNy41MzU4N0w4LjUxOTUxIDUuNDQ5NTlDOC42OTk3OSA1LjI3MzQ3IDguOTkyMDkgNS4yNzM0NyA5LjE3MjM4IDUuNDQ5NTlaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuMjMxMDUgMi4xMDM4MkM3LjA4MDI1IDIuMDU3MyA2LjkxODQ1IDIuMDU3MyA2Ljc2NzY1IDIuMTAzODJMMi42MjcyMiAzLjM4MTA4QzIuMjU5MjYgMy40OTQ1OSAyLjAzNDI4IDMuODU2NzkgMi4xMDExNCA0LjIyODA0TDIuNzQ5ODMgNy44MzAwNkMyLjk4Nzg0IDkuMTUxNjMgMy42Nzg1OCAxMC4zMzY0IDQuNzkxNTUgMTEuMDE3MkM1LjIwMDQyIDExLjI2NzMgNS42MjY0OSAxMS41MDA3IDYuMDIzNDMgMTEuNjcwM0M2LjQzMDAyIDExLjg0NCA2Ljc2MzI4IDExLjkzMTcgNi45OTkzNSAxMS45MzE3QzcuMjM1NDIgMTEuOTMxNyA3LjU2ODY4IDExLjg0NCA3Ljk3NTI3IDExLjY3MDNDOC4zNzIyMSAxMS41MDA3IDguNzk4MjggMTEuMjY3MyA5LjIwNzE1IDExLjAxNzJDMTAuMzIwMSAxMC4zMzY0IDExLjAxMDkgOS4xNTE2MyAxMS4yNDg5IDcuODMwMDdMMTEuODk3NiA0LjIyODA0QzExLjk2NDQgMy44NTY3OSAxMS43Mzk0IDMuNDk0NTkgMTEuMzcxNSAzLjM4MTA4TDcuMjMxMDUgMi4xMDM4MlpNNi40ODk2MiAxLjI0Mzc1QzYuODIxMzcgMS4xNDE0MSA3LjE3NzMzIDEuMTQxNDEgNy41MDkwOCAxLjI0Mzc1TDExLjY0OTUgMi41MjEwMUMxMi40NTkgMi43NzA3MyAxMi45NTQgMy41Njc1NyAxMi44MDY5IDQuMzg0MzFMMTIuMTU4MiA3Ljk4NjM0QzExLjg4NTkgOS40OTgzOCAxMS4wODA0IDEwLjkzNTUgOS42OTcxNiAxMS43ODE3QzkuMjY3MTMgMTIuMDQ0NyA4Ljc5ODg3IDEyLjMwMjkgOC4zNDUxNyAxMi40OTY3QzcuOTAxMTIgMTIuNjg2NCA3LjQyNzQzIDEyLjgzMzcgNi45OTkzNSAxMi44MzM3QzYuNTcxMjcgMTIuODMzNyA2LjA5NzU3IDEyLjY4NjQgNS42NTM1MyAxMi40OTY3QzUuMTk5ODMgMTIuMzAyOSA0LjczMTU3IDEyLjA0NDcgNC4zMDE1NCAxMS43ODE3QzIuOTE4MjggMTAuOTM1NSAyLjExMjgxIDkuNDk4MzggMS44NDA1IDcuOTg2MzRMMS4xOTE4IDQuMzg0MzFDMS4wNDQ3MiAzLjU2NzU3IDEuNTM5NjcgMi43NzA3MyAyLjM0OTE5IDIuNTIxMDFMNi40ODk2MiAxLjI0Mzc1WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==');
+    margin-right: 10px;
+}
+
+.form__link-policy {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: color .300s ease-in-out;
+}
+
+.form__link-policy:hover {
+    color: var(--color-yellow);
+}
+
+.form__actions .wpcf7-spinner {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    transform: translateY(-50%);
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    @include mobileXS-block {
+        margin: 0 10px;
+    }
+    @include mobileXSS-block {
+        margin: 0 4px;
+    }
+}
+
+.form__actions .wpcf7-spinner:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--color-accent-secondary);
+    border-top: 3px solid #595959;
+    transform-origin: center;
+    animation: rotate 1s infinite linear backwards;
+}
+
+.contacts__form-container .wpcf7 form .wpcf7-response-output {
+    display: none;
+    font-family: var(--font-roboto);
+    font-size: responsive 14px 16px;
+    font-range: 768px 1024px;
+    margin: 20px 0 0;
+    padding: 15px 1em;
+    border: 2px solid var(--color-yellow);
+    color: var(--color-white);
+    border-radius: 10px;
+}
+
+.contacts__form-container .wpcf7 form.invalid .wpcf7-response-output, 
+.contacts__form-container .wpcf7 form.unaccepted .wpcf7-response-output {
+    border: 1px solid var(--color-yellow);
+}
+
+.contacts__form-container .wpcf7 form.sent .wpcf7-response-output {
+    border-color: var(--color--green-light);
+}
+
+.form .wpcf7-not-valid-tip {
+    text-align: center;
+    font-family: var(--font-roboto);
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--color-invalid);
+    position: absolute;
+    width: 100%;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+}
