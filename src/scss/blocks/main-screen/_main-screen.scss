@@ -1,0 +1,33 @@
+.main-screen {
+    padding: 150px 0 150px;
+}
+
+.main-screen__plunk {
+    width: 100%;
+    max-width: 1680px;
+    max-width: 85%;
+    background: #000;
+    padding-left: 45px;
+    background: url('../img/main-screen-bg.jpg') no-repeat center;
+    background-size: cover;
+    @include mobile(padding-left, 5px);
+}
+
+.main-screen__title {
+    font-size: responsive 80px 259px;
+    font-range: 360px 1920px;
+    line-height: 0.65;
+}
+
+.main-screen__list {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 100px;
+    align-items: center;
+    margin-top: 130px;
+    @include large(grid-gap, 50px);
+}
+
+.main-screen__scroll {
+    margin-top: 150px;
+}

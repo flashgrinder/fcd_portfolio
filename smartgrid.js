@@ -5,11 +5,11 @@ module.exports = {
 	offset: "20px",
 	container: {
 		maxWidth: "1920px",
-		fields: "30px"
+		fields: "60px"
 	},
 	breakPoints: {
 		large: {
-            width: '1200px',
+            width: '1368px',
         },
         tablet: {
                 width: '1024px'

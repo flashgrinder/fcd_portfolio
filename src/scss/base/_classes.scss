@@ -66,15 +66,15 @@
     margin: 0;
     &--big {
         font-size: responsive 35px 75px;
-        font-range: 360px 1440px;
+        font-range: 360px 1920px;
     }
     &--large {
         font-size: responsive 25px 35px;
-        font-range: 360px 1440px;
+        font-range: 360px 1920px;
     }
     &--medium {
         font-size: responsive 20px 25px;
-        font-range: 360px 1440px;
+        font-range: 360px 1920px;
     }
     &--small {
         font-size: 19px;
@@ -88,8 +88,8 @@
     &--white {
         color: var(--color-white);
 	}
-    &--black-gray {
-		color: var(--color-black-gray); 
+    &--black {
+		color: var(--color-black); 
 	}
 	&--w-light {
 		font-weight: 300;

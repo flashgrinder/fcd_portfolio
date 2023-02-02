@@ -92,13 +92,13 @@ img {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .container-full {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /* Debug */
@@ -114,8 +114,8 @@ img {
   height: inherit;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .debug > div > div {
@@ -176,10 +176,10 @@ img {
 }
 
 .title--big {
-  font-size: calc(35px + 40 * ((100vw - 360px) / 1080));
+  font-size: calc(35px + 40 * ((100vw - 360px) / 1560));
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
 
   .title--big {
     font-size: 75px;
@@ -194,10 +194,10 @@ img {
 }
 
 .title--large {
-  font-size: calc(25px + 10 * ((100vw - 360px) / 1080));
+  font-size: calc(25px + 10 * ((100vw - 360px) / 1560));
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
 
   .title--large {
     font-size: 35px;
@@ -212,10 +212,10 @@ img {
 }
 
 .title--medium {
-  font-size: calc(20px + 5 * ((100vw - 360px) / 1080));
+  font-size: calc(20px + 5 * ((100vw - 360px) / 1560));
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
 
   .title--medium {
     font-size: 25px;
@@ -245,8 +245,8 @@ img {
   color: var(--color-white);
 }
 
-.title--black-gray {
-  color: var(--color-black-gray);
+.title--black {
+  color: var(--color-black);
 }
 
 .title--w-light {
@@ -405,7 +405,60 @@ img {
   overflow: hidden;
 }
 
+/* Main Screen */
+
+.main-screen {
+  padding: 150px 0 150px;
+}
+
+.main-screen__plunk {
+  width: 100%;
+  max-width: 1680px;
+  max-width: 85%;
+  background: #000;
+  padding-left: 45px;
+  background: url("../img/main-screen-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.main-screen__title {
+  font-size: calc(80px + 179 * ((100vw - 360px) / 1560));
+  line-height: 0.65;
+}
+
+@media screen and (min-width: 1920px) {
+
+  .main-screen__title {
+    font-size: 259px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .main-screen__title {
+    font-size: 80px;
+  }
+}
+
+.main-screen__list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 100px;
+  align-items: center;
+  margin-top: 130px;
+}
+
+.main-screen__scroll {
+  margin-top: 150px;
+}
+
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1368px) {
+  .main-screen__list {
+    grid-gap: 50px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .hide-tablet {
@@ -451,6 +504,10 @@ img {
 
   .hide-mobile {
     display: none !important;
+  }
+
+  .main-screen__plunk {
+    padding-left: 5px;
   }
 }
 
