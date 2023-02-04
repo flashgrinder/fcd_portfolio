@@ -21,8 +21,16 @@
 /* Blocks */
 /* Page */
 @import "./blocks/page/page";
+/* Header */
+@import "./blocks/header/header";
 /* Main Screen */
 @import "./blocks/main-screen/main-screen";
+/* Tabs */
+@import "./blocks/tabs/tabs";
+/* Portfolio */
+@import "./blocks/portfolio/portfolio";
+/* Portfolio-card */
+@import "./blocks/portfolio/portfolio-card";
 /* Contacts */
 @import "./blocks/contacts/contacts";
 /* Form */
@@ -31,8 +39,6 @@
 @import "./blocks/buttons/buttons";
 /* Menu */
 @import "./blocks/menu/menu";
-/* Header */
-@import "./blocks/header/header";
 /* Footer */
 @import "./blocks/footer/footer";
 
