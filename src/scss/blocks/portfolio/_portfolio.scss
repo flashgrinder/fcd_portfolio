@@ -1,3 +1,7 @@
+.portfolio__slider {
+    position: relative;
+}
+
 .portfolio__tabs-buttons {
     display: flex;
 }
@@ -33,4 +37,55 @@
 .portfolio__tabs-button:hover .portfolio__tabs-button-img {
     filter: grayscale(0);
     transform: scale(1.2);
+}
+
+.portfolio__tabs-button-text {
+    transition: font-size .3s ease-in-out;
+}
+
+.portfolio__tabs-button:hover .portfolio__tabs-button-text {
+    font-size: 30px;
+}
+
+.portfolio__slider-nav {
+    position: absolute;
+    right: 83px;
+    bottom: 54px;
+    z-index: 10;
+    display: flex;
+    grid-gap: 14px;
+}
+
+.portfolio__slider-arrow {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+.portfolio__slider-arrow:hover {
+    background: var(--color-dark);
+}
+
+.portfolio__slider-arrow:hover .portfolio__slider-arrow-svg {
+    stroke: var(--color-white);
+}
+
+.portfolio__swiper-button-prev {
+    padding: 19px 27px 18px 23px;
+}
+
+.portfolio__swiper-button-next {
+    padding: 19px 23px 18px 27px;
+}
+
+.portfolio__slider-arrow-svg {
+    stroke: var(--color-dark);
+    transition: stroke .3s ease-in-out;
+}
+
+.portfolio__swiper-slide.swiper-slide {
+    height: 100%;
 }

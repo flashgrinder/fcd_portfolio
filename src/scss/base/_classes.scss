@@ -130,6 +130,10 @@
 	&--black {
 		color: var(--color-black); 
 	}
+	&--huge {
+        font-size: responsive 30px 40px;
+        font-range: 360px 1440px;
+	}
 	&--big {
         font-size: responsive 20px 30px;
         font-range: 360px 1440px;

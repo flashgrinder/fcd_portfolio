@@ -1,57 +1,23 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Autoplay, EffectFade } from 'swiper';
 
 function init() {
 
-    Swiper.use([Navigation]);
+    Swiper.use([Navigation, Autoplay, EffectFade]);
 
-    const tarifsSliderStore = new Swiper(".tarifs__swiper-container--default", {
-        slidesPerView: 1,
-        // autoHeight: true,
-        calculateHeight:true,
-        navigation: {
-            nextEl: '.tarifs__swiper-button-next',
-            prevEl: '.tarifs__swiper-button-prev'
+    const portfolio = new Swiper(".js-portfolio-slider", {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                slidesPerColumn: 1
-            }
-        }
-    });
-
-    const tarifsSliderWeb = new Swiper(".tarifs__swiper-container--web", {
         slidesPerView: 1,
-        // autoHeight: true,
-        calculateHeight:true,
+        loop: true,
+        autoplay: true,
+        autoHeight: true,
+        speed: 1500,
         navigation: {
-            nextEl: '.tarifs__swiper-button-next',
-            prevEl: '.tarifs__swiper-button-prev'
+            nextEl: '.portfolio__swiper-button-next',
+            prevEl: '.portfolio__swiper-button-prev'
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                slidesPerColumn: 1
-            }
-        }
     });
 }
 

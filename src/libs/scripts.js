@@ -1,5 +1,5 @@
 import tabs from '../libs/modules/tabs';
-// import portfolio from '../libs/modules/portfolio';
+import portfolio from '../libs/modules/portfolio';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
     // });
 
     const tabsTrue = document.querySelector('.tabs');
-    // const portfolioTrue = document.querySelector('.portfolio__slider');
+    const portfolioTrue = document.querySelector('.js-portfolio-slider');
 
     tabsTrue ? tabs.init() : false;
-    // portfolioTrue ? portfolio.init() : false;
+    portfolioTrue ? portfolio.init() : false;
 });
