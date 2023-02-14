@@ -28,6 +28,17 @@
     @include large(grid-gap, 50px);
 }
 
+.main-screen__info-outer {
+    margin-top: 150px;
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.main-screen__info {
+    margin-top: 150px;
+}
+
 .main-screen__scroll {
     margin-top: 150px;
 }
