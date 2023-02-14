@@ -2,6 +2,8 @@
     font-family: var(--font-roboto);
     width: 100%;
     background: var(--color-white);
+    padding-left: 60px;
+    border-left: 1px solid #F4F4F4;
 }
 
 .form.invalid .form__input.wpcf7-not-valid {
@@ -64,14 +66,13 @@
 
 .form__input {
     position: relative;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 22px;
     width: 100%;
-    padding: 26px;
+    padding: 20px 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--color-black);
-    border-radius: 4px;
     background: #F4F4F2;
 }
 
@@ -126,6 +127,10 @@
 
 .form__link-policy:hover {
     color: var(--color-yellow);
+}
+
+.form__actions .form__btn {
+    width: 100%;
 }
 
 .form__actions .wpcf7-spinner {

@@ -918,6 +918,7 @@ img {
 
 .contacts {
   position: relative;
+  padding: 100px 0;
 }
 
 .contacts__social {
@@ -949,34 +950,52 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
+.contacts__body {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .contacts__inner {
   display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 70%;
-  margin-left: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contacts__map-outer {
+  width: 100%;
+  max-width: 635px;
 }
 
 .contacts__map {
-  width: 100%;
-  max-width: 860px;
+  margin-top: 60px;
+  padding-right: 60px;
+}
+
+.contacts__info {
+  margin-top: 70px;
+}
+
+.contacts__connect {
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.contacts__connect ~ .contacts__connect {
+  margin-top: 30px;
+}
+
+.contacts__connect-icon {
+  margin-right: 20px;
 }
 
 .contacts__form-wrapp {
-  background: #F6F6F4;
-  padding: 35px;
-  max-width: 600px;
   width: 100%;
 }
 
-.contacts__form-container {
-  background: var(--color-white);
-  padding: 45px 35px 70px;
-  box-shadow: 0px 0px 31px rgba(0, 0, 0, 0.05);
-}
-
 .contacts__form {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 /* Form */
@@ -985,6 +1004,8 @@ img {
   font-family: var(--font-roboto);
   width: 100%;
   background: var(--color-white);
+  padding-left: 60px;
+  border-left: 1px solid #F4F4F4;
 }
 
 .form.invalid .form__input.wpcf7-not-valid {
@@ -1047,14 +1068,13 @@ img {
 
 .form__input {
   position: relative;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 22px;
   width: 100%;
-  padding: 26px;
+  padding: 20px 25px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--color-black);
-  border-radius: 4px;
   background: #F4F4F2;
 }
 
@@ -1117,6 +1137,10 @@ img {
 
 .form__link-policy:hover {
   color: var(--color-yellow);
+}
+
+.form__actions .form__btn {
+  width: 100%;
 }
 
 .form__actions .wpcf7-spinner {
@@ -1201,9 +1225,8 @@ img {
   font-style: normal;
   text-decoration: none;
   text-align: center;
-  font-size: 28px;
-  border-radius: 5px;
-  padding: 20px 85px;
+  font-size: 20px;
+  padding: 22px 85px;
   z-index: 10;
   outline: var(--color-black);
   border: none;
@@ -1213,8 +1236,8 @@ img {
 }
 
 .button--primary {
-  color: var(--color-dark);
-  background: #D9D9D9;
+  color: var(--color-white);
+  background: var(--color-black);
 }
 
 .button--primary:hover {
@@ -1274,6 +1297,7 @@ img {
 
 .footer {
   padding: 70px 0;
+  background: #F4F4F4;
 }
 
 .footer__inner {
