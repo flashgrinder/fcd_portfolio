@@ -38,7 +38,6 @@
 .contacts__body {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .contacts__inner {
@@ -98,4 +97,9 @@
 
 .contacts__title {
     @include mobile(text-align, center);
+}
+
+.contacts__title--form {
+    padding-left: 60px;
+    @include mobile(padding-left, 0);
 }

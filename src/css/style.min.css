@@ -710,7 +710,6 @@ img {
 }
 
 .main-screen__info-outer {
-  margin-top: 150px;
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -955,7 +954,6 @@ img {
 .contacts__body {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .contacts__inner {
@@ -997,6 +995,10 @@ img {
 
 .contacts__form {
   margin-top: 60px;
+}
+
+.contacts__title--form {
+  padding-left: 60px;
 }
 
 /* Form */
@@ -1420,6 +1422,10 @@ img {
 
   .contacts__title {
     text-align: center;
+  }
+
+  .contacts__title--form {
+    padding-left: 0;
   }
 
   .form {
