@@ -1,5 +1,6 @@
 .main-screen {
     padding: 150px 0 150px;
+    @include mobile(padding, 60px 0 60px);
 }
 
 .main-screen__plunk {
@@ -10,7 +11,10 @@
     padding-left: 45px;
     background: url('../img/main-screen-bg.jpg') no-repeat center;
     background-size: cover;
-    @include mobile(padding-left, 5px);
+    @include mobile-block {
+        padding-left: 5px;
+        max-width: 100%;
+    }
 }
 
 .main-screen__title {
@@ -26,6 +30,17 @@
     align-items: center;
     margin-top: 130px;
     @include large(grid-gap, 50px);
+    @include mobile-block {
+        margin-top: 60px;
+    }
+}
+
+.main-screen__item:first-child {
+    @include mobile(font-size, 35px);
+}
+
+.main-screen__item {
+    @include mobile(font-size, 15px);
 }
 
 .main-screen__info-outer {
@@ -37,8 +52,10 @@
 
 .main-screen__info {
     margin-top: 150px;
+    @include mobile(margin-top, 60px);
 }
 
 .main-screen__scroll {
     margin-top: 150px;
+    @include mobile(margin-top, 60px);
 }
