@@ -712,7 +712,6 @@ img {
 .main-screen__info-outer {
   margin-top: 150px;
   max-width: 1320px;
-  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -1440,6 +1439,20 @@ img {
   .container-full {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .main-screen__list {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 25px;
+  }
+
+  .main-screen__item:first-child {
+    font-size: 45px;
+  }
+
+  .main-screen__item {
+    font-size: 25px;
   }
 
   .form__actions .wpcf7-spinner {

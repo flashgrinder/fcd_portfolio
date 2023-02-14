@@ -33,20 +33,26 @@
     @include mobile-block {
         margin-top: 60px;
     }
+    @include mobileXS-block {
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 25px;
+    }
 }
 
 .main-screen__item:first-child {
     @include mobile(font-size, 35px);
+    @include mobileXS(font-size, 45px);
 }
 
 .main-screen__item {
     @include mobile(font-size, 15px);
+    @include mobileXS(font-size, 25px);
 }
 
 .main-screen__info-outer {
     margin-top: 150px;
     max-width: 1320px;
-    padding: 0 20px;
     margin: 0 auto;
 }
 
