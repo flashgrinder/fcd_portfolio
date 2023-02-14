@@ -988,7 +988,6 @@ img {
 }
 
 .contacts__connect {
-  display: block;
   display: flex;
   align-items: center;
 }
@@ -1359,6 +1358,46 @@ img {
 
   .main-screen__plunk {
     padding-left: 5px;
+  }
+
+  .contacts__social {
+    top: auto;
+    bottom: 21%;
+    transform: none;
+  }
+
+  .contacts__inner {
+    flex-direction: column;
+    justify-content: auto;
+  }
+
+  .contacts__map-outer {
+    max-width: 100%;
+    margin-top: 60px;
+  }
+
+  .contacts__map {
+    padding-right: 0;
+    padding-left: 180px;
+  }
+
+  .contacts__connect {
+    justify-content: center;
+  }
+
+  .contacts__form-wrapp {
+    order: -1;
+  }
+
+  .contacts__title {
+    text-align: center;
+  }
+
+  .form {
+    border-left: none;
+    border-bottom: 1px solid #F4F4F4;
+    padding-bottom: 60px;
+    padding-left: 0;
   }
 }
 

@@ -4,6 +4,12 @@
     background: var(--color-white);
     padding-left: 60px;
     border-left: 1px solid #F4F4F4;
+    @include mobile-block {
+        border-left: none;
+        border-bottom: 1px solid #F4F4F4;
+        padding-bottom: 60px;
+        padding-left: 0;
+    }
 }
 
 .form.invalid .form__input.wpcf7-not-valid {

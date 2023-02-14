@@ -11,6 +11,11 @@
     flex-direction: column;
     width: fit-content;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05);
+    @include mobile-block {
+        top: auto;
+        bottom: 21%;
+        transform: none;
+    }
 }
 
 .contacts__soc-link {
@@ -40,16 +45,28 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include mobile-block {
+        flex-direction: column;
+        justify-content: auto;
+    }
 }
 
 .contacts__map-outer {
     width: 100%;
     max-width: 635px;
+    @include mobile-block {
+        max-width: 100%;
+        margin-top: 60px;
+    }
 }
 
 .contacts__map {
     margin-top: 60px;
     padding-right: 60px;
+    @include mobile-block {
+        padding-right: 0;
+        padding-left: 180px;
+    }
 }
 
 .contacts__info {
@@ -57,9 +74,9 @@
 }
 
 .contacts__connect {
-    display: block;
     display: flex;
     align-items: center;
+    @include mobile(justify-content, center);
 }
 
 .contacts__connect ~ .contacts__connect {
@@ -72,8 +89,13 @@
 
 .contacts__form-wrapp {
     width: 100%;
+    @include mobile(order, -1);
 }
 
 .contacts__form {
     margin-top: 60px;
+}
+
+.contacts__title {
+    @include mobile(text-align, center);
 }
