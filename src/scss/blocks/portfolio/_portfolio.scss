@@ -4,6 +4,9 @@
 
 .portfolio__tabs-buttons {
     display: flex;
+    @include mobile-block {
+        flex-direction: column;
+    }
 }
 
 .portfolio__tabs-button {
@@ -13,6 +16,11 @@
     text-align: center;
     overflow: hidden;
     cursor: pointer;
+    @include mobile-block {
+        width: 100%;
+        padding: 43px;
+    }
+    @include mobile(padding, 32px);
 }
 
 .portfolio__tabs-button-text {
@@ -37,14 +45,6 @@
 .portfolio__tabs-button:hover .portfolio__tabs-button-img {
     filter: grayscale(0);
     transform: scale(1.2);
-}
-
-.portfolio__tabs-button-text {
-    transition: font-size .3s ease-in-out;
-}
-
-.portfolio__tabs-button:hover .portfolio__tabs-button-text {
-    font-size: 30px;
 }
 
 .portfolio__slider-nav {

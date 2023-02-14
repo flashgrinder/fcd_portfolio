@@ -791,14 +791,6 @@ img {
   transform: scale(1.2);
 }
 
-.portfolio__tabs-button-text {
-  transition: font-size 0.3s ease-in-out;
-}
-
-.portfolio__tabs-button:hover .portfolio__tabs-button-text {
-  font-size: 30px;
-}
-
 .portfolio__slider-nav {
   position: absolute;
   right: 83px;
@@ -1383,6 +1375,19 @@ img {
 
   .main-screen__scroll {
     margin-top: 60px;
+  }
+
+  .portfolio__tabs-buttons {
+    flex-direction: column;
+  }
+
+  .portfolio__tabs-button {
+    width: 100%;
+    padding: 43px;
+  }
+
+  .portfolio__tabs-button {
+    padding: 32px;
   }
 
   .contacts__social {
