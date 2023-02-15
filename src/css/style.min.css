@@ -1320,11 +1320,25 @@ img {
   .main-screen__list {
     grid-gap: 50px;
   }
+
+  .contacts__inner {
+    width: 90%;
+    margin-left: auto;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .hide-tablet {
     display: none !important;
+  }
+
+  .contacts__soc-link {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contacts__inner {
+    width: 95%;
   }
 }
 
@@ -1393,13 +1407,15 @@ img {
 
   .contacts__social {
     top: auto;
-    bottom: 21%;
+    bottom: 25.85%;
     transform: none;
   }
 
   .contacts__inner {
     flex-direction: column;
     justify-content: auto;
+    width: auto;
+    margin: auto;
   }
 
   .contacts__map-outer {
@@ -1409,7 +1425,7 @@ img {
 
   .contacts__map {
     padding-right: 0;
-    padding-left: 180px;
+    padding-left: 120px;
   }
 
   .contacts__connect {
