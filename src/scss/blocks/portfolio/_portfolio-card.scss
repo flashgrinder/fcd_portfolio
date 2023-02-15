@@ -6,26 +6,62 @@
 .portfolio-card__header {
     padding: 80px 90px 100px 100px;
     width: 30%;
+    @include tablet(padding, 35px 75px 80px 80px);
+    @include mobile-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 30px;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        padding: 40px;
+    }
+    @include mobileXS(padding, 20px);
 }
 
 .portfolio-card__top {
     margin-bottom: 100px;
+    @include mobile-block {
+        margin-bottom: 0;
+        order: 1;
+    }
 }
 
 .portfolio-card__plus {
     margin-left: 30px;
+    @include tablet-block {
+        margin-left: 30px;
+        width: 20px;
+        height: 20px;
+    }
+    @include mobile(display, none);
+}
+
+.portfolio-card__plus svg {
+    display: block;
+    @include tablet-block {
+        width: 100%;
+    }
 }
 
 .portfolio-card__time {
     display: block;
     text-align: right;
     margin-top: 50px;
+    @include large(font-size, 25px);
+    @include mobile-block {
+        margin-top: 0;
+        color: var(--color-white);
+    }
 }
 
 .portfolio-card__info {
     display: flex;
     position: absolute;
     bottom: 100px;
+    @include tablet(bottom, 20px);
+    @include mobile(position, static);
 }
 
 .portfolio-card__text {
@@ -33,16 +69,28 @@
     transform-origin: 0 100%;
     white-space: nowrap;
     padding-top: 30px;
+    @include mobile(display, none);
 }
 
 .portfolio-card__logo {
     display: block;
     width: 63px;
+    @include large(width, 30px);
+    @include mobile(display, none);
+}
+
+.portfolio-card__logo--mobile {
+    display: none;
+    @include mobile-block {
+        display: block;
+        width: 100%;
+    }
 }
 
 .portfolio-card__body {
     position: relative;
     width: 70%;
+    @include mobile(width, 100%);
 }
 
 .portfolio-card__img {
@@ -56,6 +104,11 @@
     position: absolute;
     left: 5%;
     bottom: 5%;
+    @include mobileXS-block {
+        left: auto;
+        right: 3%;
+        bottom: 3%;
+    }
 }
 
 .portfolio-card__button {
@@ -71,6 +124,19 @@
     border-radius: 50%;
     transition: background .3s ease-in-out, color .3s ease-in-out;
     font-size: 25px;
+    @include large-block {
+        max-width: 104px;
+        max-height: 104px;
+        padding: 42px 22px;
+        font-size: 16px;
+    }
+    @include large(bottom, 35px);
+    @include mobile-block {
+        max-width: 90px;
+        max-height: 90px;
+        padding: 36px 18px;
+        font-size: 14px;
+    }
 }
 
 .portfolio-card__button:hover {

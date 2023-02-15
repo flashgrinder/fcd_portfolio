@@ -54,6 +54,7 @@
     z-index: 10;
     display: flex;
     grid-gap: 14px;
+    @include large(bottom, 35px);
 }
 
 .portfolio__slider-arrow {
@@ -63,6 +64,10 @@
     background: var(--color-white);
     cursor: pointer;
     transition: background .3s ease-in-out;
+    @include large-block {
+        width: 39px;
+        height: 39px;
+    }
 }
 
 .portfolio__slider-arrow:hover {
@@ -75,10 +80,16 @@
 
 .portfolio__swiper-button-prev {
     padding: 19px 27px 18px 23px;
+    @include large-block {
+        padding: 12px 16px 12px 15px;
+    }
 }
 
 .portfolio__swiper-button-next {
     padding: 19px 23px 18px 27px;
+    @include large-block {
+        padding: 12px 15px 12px 16px;
+    }
 }
 
 .portfolio__slider-arrow-svg {
@@ -88,4 +99,34 @@
 
 .portfolio__swiper-slide.swiper-slide {
     height: 100%;
+}
+
+.portfolio__slider-pagination {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    @include mobile(display, block);
+}
+
+.portfolio__slider-bullet {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: #F4F4F4;
+    transform: scale(1);
+    transition: background .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.portfolio__slider-bullet:hover {
+    background: var(--color-black);
+    transform: scale(1.2);
+}
+
+.portfolio__slider-bullet--active {
+    background: var(--color-black);
+}
+
+.portfolio__slider-bullet ~ .portfolio__slider-bullet {
+    margin-left: 10px;
 }

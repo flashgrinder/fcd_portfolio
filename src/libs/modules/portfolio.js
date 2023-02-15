@@ -1,8 +1,8 @@
-import Swiper, { Navigation, Autoplay, EffectFade } from 'swiper';
+import Swiper, { Navigation, Autoplay, EffectFade, Pagination } from 'swiper';
 
 function init() {
 
-    Swiper.use([Navigation, Autoplay, EffectFade]);
+    Swiper.use([Navigation, Autoplay, EffectFade, Pagination]);
 
     const portfolio = new Swiper(".js-portfolio-slider", {
         effect: 'fade',
@@ -17,6 +17,13 @@ function init() {
         navigation: {
             nextEl: '.portfolio__swiper-button-next',
             prevEl: '.portfolio__swiper-button-prev'
+        },
+        pagination: {
+            el: '.portfolio__slider-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletActiveClass: 'portfolio__slider-bullet--active',
+            bulletClass: 'portfolio__slider-bullet',
         },
     });
 }
