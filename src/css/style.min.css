@@ -811,6 +811,43 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
+/* Hystmodal */
+
+.hystmodal--active {
+  opacity: 1;
+}
+
+.hystmodal--moved,
+.hystmodal--active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.hystmodal__wrap {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hystmodal__window {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  overflow: visible;
+  transition: opacity 0.2s ease 0.3s;
+  opacity: 0;
+}
+
+.hystmodal--active .hystmodal__window {
+  opacity: 1;
+}
+
 /* ANOTHER MODULES */
 
 /* Blocks */
@@ -1125,7 +1162,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   max-width: 167px;
   max-height: 167px;
-  padding: 67px 39px;
+  padding: 67px 19px;
   background: var(--color-white);
   cursor: pointer;
   border-radius: 50%;
@@ -1136,6 +1173,75 @@ button.swiper-pagination-bullet {
 .portfolio-card__button:hover {
   background: var(--color-dark);
   color: var(--color-white);
+}
+
+/* Modal */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  z-index: 999;
+  background: rgba(217, 217, 217, 0.7);
+  -webkit-backdrop-filter: blur(17px);
+          backdrop-filter: blur(17px);
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition-delay: 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.hystmodal--active {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  transition-delay: 0s;
+}
+
+.hystmodal__opened {
+  position: static;
+}
+
+.modal__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 880px;
+  width: 100%;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.modal__close-svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  fill: var(--color-black);
+  stroke: var(--color-black);
 }
 
 /* Contacts */
@@ -1572,7 +1678,7 @@ button.swiper-pagination-bullet {
   .portfolio-card__button {
     max-width: 104px;
     max-height: 104px;
-    padding: 42px 22px;
+    padding: 42px 12px;
     font-size: 16px;
   }
 
@@ -1607,6 +1713,15 @@ button.swiper-pagination-bullet {
 
   .portfolio-card__info {
     bottom: 20px;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .modal__body {
+    padding: 25px;
+    max-width: 100%;
   }
 
   .contacts__soc-link {
@@ -1735,7 +1850,7 @@ button.swiper-pagination-bullet {
   .portfolio-card__button {
     max-width: 90px;
     max-height: 90px;
-    padding: 36px 18px;
+    padding: 36px 10px;
     font-size: 14px;
   }
 

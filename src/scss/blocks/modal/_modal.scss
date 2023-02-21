@@ -1,0 +1,75 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    -webkit-overflow-scrolling: touch;
+    background-color: transparent;
+    z-index: 999;
+    background: rgba(217, 217, 217, 0.7);
+    backdrop-filter: blur(17px);
+    border-radius: 20px;
+    visibility: hidden;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    opacity: 0;
+    transition:  visibility .3s ease-in-out, opacity .3s ease-in-out;
+    transition-delay: .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include tablet-block {
+        width: 90%;
+    }
+}
+
+.modal.hystmodal--active {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    transition-delay: 0s;
+}
+
+.hystmodal__opened {
+    position: static;
+}
+
+.modal__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 880px;
+    width: 100%;
+    padding: 60px;
+    // overflow-x: hidden;
+    border-radius: 20px;
+    @include tablet-block {
+        padding: 25px;
+        max-width: 100%;
+    }
+}
+
+.modal__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.modal__close-svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    fill: var(--color-black);
+    stroke: var(--color-black);
+}

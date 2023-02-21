@@ -10,8 +10,8 @@ function init() {
             crossFade: true
         },
         slidesPerView: 1,
-        loop: true,
-        autoplay: true,
+        // loop: true,
+        // autoplay: true,
         autoHeight: true,
         speed: 1500,
         navigation: {

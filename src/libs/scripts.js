@@ -1,5 +1,6 @@
 import tabs from '../libs/modules/tabs';
 import portfolio from '../libs/modules/portfolio';
+import modal from './modules/modal';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     tabsTrue ? tabs.init() : false;
     portfolioTrue ? portfolio.init() : false;
+    modal.init();
 });
